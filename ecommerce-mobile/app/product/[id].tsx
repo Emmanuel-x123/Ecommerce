@@ -1,5 +1,5 @@
 import { Text } from "@/components/ui/text";
-import { useLocalSearchParams } from "expo-router";
+import { Stack, useLocalSearchParams } from "expo-router";
 import products from "@/assets/products.json";
 import { Card } from "@/components/ui/card";
 import { Image } from "@/components/ui/image";
@@ -17,8 +17,9 @@ export default function ProducDetailScreen () {
     }
 
     return(
+        <Box className="bg-gray-300 flex-1 items-center p-3">
+            <Stack.Screen options={{title: product.name}}/>
         <Card className="p-5 rounded-lg flex-1 w-full md:w-[calc(50%-10px)] lg:w-[calc(33.33%-10px)] xl:w-[calc(25%-10px)]">
-
         <Image
           source={{ uri: product.image }}
           className="mb-6 h-auto w-full rounded-md aspect-[4/3]"
@@ -47,6 +48,7 @@ export default function ProducDetailScreen () {
           </Button>
         </Box>
       </Card>
+      </Box>
     )
     
 }

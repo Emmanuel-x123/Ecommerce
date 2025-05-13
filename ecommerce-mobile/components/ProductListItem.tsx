@@ -9,7 +9,7 @@ export default function ProductListItem({ product }) {
   return (
     <Link href={`/product/${product.id}`} asChild> 
     <Pressable className="flex-1">
-    <Card className="p-5 rounded-lg flex-1 w-full md:w-[calc(50%-10px)] lg:w-[calc(33.33%-10px)] xl:w-[calc(25%-10px)]">
+    <Card className="p-5 rounded-lg flex-1">
 
       <Image
         source={{ uri: product.image }}
