@@ -8,6 +8,20 @@
       "when": 1747268698269,
       "tag": "0000_typical_adam_warlock",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1747269208090,
+      "tag": "0001_acoustic_radioactive_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1747269469430,
+      "tag": "0002_tearful_whizzer",
+      "breakpoints": true
     }
   ]
 }
