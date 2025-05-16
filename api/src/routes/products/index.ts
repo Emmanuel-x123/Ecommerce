@@ -5,6 +5,12 @@ import { listProducts,
        updateProduct, 
        deleteProduct 
       } from "./productsControler";
+import { validateData } from "../../middlewares/validationMiddleware"
+
+import { createProductSchema, updateProductSchema } from "../../db/productsSchema";
+
+
+
 
 //products router end points.
 const router = Router();
@@ -13,9 +19,9 @@ const router = Router();
 
   router.get('/:id', getProductById)
 
-  router.post('/', createProduct)
+  router.post('/', validateData(createProductSchema), createProduct)
 
-  router.put('/:id', updateProduct)
+  router.put('/:id', validateData(updateProductSchema), updateProduct)
 
   router.delete('/:id', deleteProduct)
 
