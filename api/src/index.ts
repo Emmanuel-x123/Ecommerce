@@ -1,5 +1,6 @@
 import express, { json, Router, urlencoded } from "express";
 import productrouter from "./routes/products/index";
+import authRoutes from "./routes/auth/index";
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
 
 
   app.use('/products', productrouter)
+  app.use('/auth', authRoutes)
 
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
